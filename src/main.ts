@@ -5,10 +5,12 @@ import './assets/styles/styles.scss'
 
 //  Plugins
 import vuetify from "./plugins/vuetify"
+import store from './store/Index'
 
 const app = createApp(App)
 
 
-app.use(router).use(vuetify)
+app.use(router).use(vuetify).use(store)
 
 app.mount('#app')
+
