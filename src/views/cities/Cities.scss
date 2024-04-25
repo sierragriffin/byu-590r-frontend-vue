@@ -1,0 +1,113 @@
+// .v-card .v-card-subtitle {
+//     min-height: 50px; /* Removes any minimum height restriction */
+//     max-height: none; /* Removes any maximum height restriction */
+//     min-width: 400px;
+//     overflow: visible !important; /* Ensures this rule takes precedence */
+//     white-space: normal !important; /* Allows text to wrap */
+//     word-wrap: break-word !important;/* Ensures long words do not overflow */
+// }
+
+
+// .image-container {
+//     width: 100%; /* Optionally set the width to fill its parent container */
+//     height: 200px; /* Set the fixed height */
+//     display: flex; /* Use flexbox to center the image vertically */
+//     justify-content: center; /* Center horizontally */
+//     align-items: center; /* Center vertically */
+//     overflow: hidden; /* Ensure the image doesn't overflow the container */
+// }
+
+.bold-text {
+    font-weight: bold;
+}
+
+.lighter-text {
+    font-weight: lighter;
+}
+
+// .text-container {
+//     white-space: nowrap;
+//     overflow: hidden;
+//     text-overflow: ellipsis;
+//   }
+
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Adjust the gap as necessary */
+    justify-content: center; /* Center the cards within the container */
+  }
+  
+.v-card {
+    flex: 1; /* Cards can grow */
+    min-width: 250px; /* Set a reasonable min-width */
+    width: 400px; /* Set the width of the cards */
+    max-width: 100%; /* Ensure cards do not exceed the width of their container */
+    overflow: hidden; /* Ensures content does not spill out */
+    box-sizing: border-box; /* Include padding and borders in the width calculation */
+}
+
+@media (max-width: 600px) {
+.v-card {
+    min-width: 150px; /* Smaller min-width for very small screens */
+    width: auto; /* Allow cards to adjust their width on small screens */
+    }
+}
+
+.v-card-subtitle {
+    /* Adjust styles for subtitle */
+    min-height: auto;
+    max-height: none;
+    height: auto;
+    white-space: normal;
+    overflow: visible;
+    word-wrap: break-word;
+    padding: 5px;
+    margin: 0;
+}
+
+.v-btn {
+    // padding: 5px;
+    margin: 2px;
+    min-width: 0; /* Allow the button to shrink to its minimum content size */
+    overflow: hidden; /* Prevent content from overflowing */
+    white-space: nowrap; /* Keep the button label on one line */
+    text-overflow: ellipsis; /* Add ellipsis if the label is too long */
+    font-size: 0.875rem;
+  }
+  
+  .my-btn {
+    padding: 4px; /* Adjust the padding to make the button smaller */
+    min-width: 0; /* This can help if the buttons have a minimum width set */
+    margin-right: 20px;
+  }
+
+  .my-dialog .v-card {
+    min-width: 600px; /* Set a minimum width for your dialog content */
+  }
+  
+  @media (max-width: 900px) { /* Adjust breakpoint as needed */
+    .my-dialog .v-card {
+      min-width: 100%; /* On smaller screens, the dialog can take up full width */
+      max-width: 100%; /* Add this to ensure the dialog does not exceed the screen width */
+    }
+  }
+
+  .my-dialog .v-dialog__content--active {
+    /* Center the dialog vertically and horizontally */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* This style resets any transform applied by Vuetify to the dialog, which can affect centering */
+  .my-dialog .v-dialog__content {
+    transform: none !important;
+  }
+
+  
+  
+  
+
+  
